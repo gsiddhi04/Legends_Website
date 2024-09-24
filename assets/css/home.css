@@ -1,0 +1,963 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.mobile-menu-button {
+    position: fixed;
+    top: 0.2em;
+    right: 0.2em;
+    z-index: 1001;
+
+    font-size: 2.3em;
+    color: #ffffff;
+    line-height: 0;
+
+    visibility: hidden;
+}
+
+.mobile-menu-button:hover {
+    color: #26d06c;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -13.7em;
+    left: auto;
+
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+#header .nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#header a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    margin: 0;
+    padding: 4px;
+
+    color: #ffffff;
+
+    transition: all 0.5s;
+}
+
+#header a:link {
+    text-decoration: none;
+}
+
+#header a:visited {
+    text-decoration: none;
+}
+
+#header a:hover {
+    color: #26d06c;
+}
+
+#header a:active {
+    text-decoration: none;
+}
+
+#header a.active {
+    color: #26d06c;
+}
+
+#header a i{
+    font-size: 2em;
+    color: inherit;
+    width: 1.4em;
+}
+
+#header a span {
+    color: inherit;
+    font-size: 1.5em;
+    font-weight: bold;
+
+    padding-right: 16px;
+    margin: 0;
+}
+
+
+.mobile-menu-active {
+    overflow: hidden;
+}
+
+.mobile-menu-active #header {
+    right: 0;
+}
+
+@media (max-width: 992px){
+    .mobile-menu-button {
+        visibility: visible;
+    }
+
+    #header {
+        right: -20em;
+
+        background: rgba(40, 40, 40, 0.9);
+        padding-left: 12px;
+
+        overflow: scroll;
+    }
+
+    #header a i {
+        font-size: 1.6em;
+        width: 1.4em;
+    }
+
+    #header a span {
+        font-size: 1.2em;
+        font-weight: 500;
+        padding-right: 8px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Intro
+--------------------------------------------------------------*/
+#intro {
+    padding: 0;
+}
+
+#intro .logos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+
+    display: flex;
+    padding: 3% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#intro .logo-bar {
+    height: 64px;
+    width: 2px;
+    background: white;
+    padding: 0;
+    margin: 0 12px;
+
+    display: none;
+}
+
+#intro .intro-container{
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 3%;
+    margin: 0;
+
+    background-image: url(../images/intro_page/intro_page_background_img.jpeg);
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#intro .iitk-logo{
+    width: 120px;
+}
+
+#intro .ec-logo{
+    width: 120px;
+}
+
+#intro .text-box{
+    width: 100%;
+    color: #fff;
+}
+
+#intro .election{
+    font-size: 65px;
+    color: #18d26e;
+    font-weight: 700; 
+}
+#intro .commission{
+    font-size: 65px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#intro .iit-kanpur {
+    font-size: 55px;
+    font-weight: 500;
+}
+
+#intro .text-box2{
+    width: 70%;
+    color: #fff;
+    font-weight: 500;
+    margin: 12px 0;
+}
+#intro .text-box2 p{
+    font-size: 16px;
+
+    padding: 0;
+    margin: 0;
+}
+
+#intro .text-box3 a,
+#intro .text-box3 a:active{
+    color: #18d26e;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+#intro .text-box3 a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#intro .text-box3 .fa{
+    display: inline;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#intro .bar{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+  
+  
+  @media(max-width: 960px){
+  #intro .logos{
+    justify-content: flex-start;
+  }
+  
+  #intro .ec-logo{
+    width: 64px;
+  }
+
+  #intro .iitk-logo{
+    width: 56px;
+  }
+
+  #intro .logo-bar{
+    display: block;
+  }
+
+  #intro .election{
+      font-size: 28px;       
+      color: #18d26e;
+  }
+
+  #intro .commission{
+      font-size: 28px;
+  }
+
+  #intro .iit-kanpur {
+    font-size: 20px;
+  }
+
+  #intro .text-box2{
+    width: 100%;
+  }
+  
+  #intro .text-box2 p{
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  #intro .text-box3 a,
+  #intro .text-box3 a:active{
+    font-size: 14px;
+  }
+
+  #intro .text-box3 .fa{
+    display: inline;
+    color: #fff;
+    font-size: 16px;
+  }
+  #intro .bar{
+    font-size: 20px;
+  }
+  }
+
+
+/*--------------------------------------------------------------
+# Executive Candidates
+--------------------------------------------------------------*/
+#executives{
+    background-color: #202020;
+}
+
+#executives .candidate-row{
+    margin: 0;
+    justify-content: flex-start;
+}
+
+#executives .col {
+    padding: 0;
+    margin: 0;
+}
+
+#executives .candidate-col{
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    margin: 12px;
+    border-radius: 16px;
+}
+
+#executives .cand-link {
+    color: #202020;
+}
+
+#executives .cand-link:hover .candidate-col {
+    outline: 2px solid rgba(24, 210, 111, 0.8);
+}
+
+#executives .exe-img{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+#executives .candidate-col img {
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+}
+
+#executives .candidate-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin: 0;
+    padding: 0;
+}
+
+#executives .post{
+    font-size: 12px;
+    font-weight: 600;
+    color: #737373;
+    text-align: center;
+    text-transform: uppercase;
+    
+    margin: 0;
+    padding: 0;
+}
+
+#executives .category{
+    font-size: 12px;
+    font-weight: 500;
+    color: #737373;
+    text-align: center;
+    text-transform: uppercase;
+    
+    margin: 0;
+    padding: 0;
+}
+
+#executives .desc{
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    padding: 16px 0 12px 0;
+}
+
+@media(max-width: 576px) {
+    #executives .candidate-col {
+        width: 80%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*--------------------------------------------------------------
+# Senator Candidates
+--------------------------------------------------------------*/
+#senators {
+    background-color: #202020;
+}
+
+#senators a,
+#senators a:active {
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+
+    width: min-content;
+
+    padding: 0;
+    margin: 0 auto;
+
+    color: #18d26e
+}
+
+#senators a:hover {
+    color: #ffffff;
+}
+
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+#team {
+    display: block;
+}
+
+#team .ceo-div {
+    width: 100%;
+    background-color: #0e313b;
+}
+
+#team .man-div {
+    width: 100%;
+    background-color: #000d2b;
+}
+
+#team .ceo {
+    padding: 0;
+    margin: 16px auto;
+    justify-content: space-around;
+}
+
+#team .man {
+    padding: 0;
+    margin: 0 auto;
+}
+
+#team .team-card {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    padding: 20px 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+}
+
+#team .img-div {
+    border-radius: 50%;
+    background-image: linear-gradient(30deg, #2bcece, #2a4444);
+    overflow: hidden;
+
+    width: 148px;
+    height: 148px;
+    flex: 0 0 148px;
+
+    padding: 6px;
+}
+
+#team img {
+    width: 100%;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+#team .info-div {
+    flex: 1 1 fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#team .text-deco {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    white-space: normal;
+}
+
+#team .p-name {
+	padding: 0px;
+    margin: 0px;
+
+    font-size: 19px;
+    color: #ffffff;
+}
+
+#team .p-des {
+    padding: 0px;
+    margin: 0 0 4px 0;
+
+    font-size: 15px;
+    color: #18d26e;
+}
+
+#team .tel-link,
+#team .tel-link:active {
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#team .tel-link:hover {
+    text-decoration: none;
+    color: #a6a6a6;
+}
+
+#team .p-sm {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+#team .social-link,
+#team .social-link:active {
+    font-size: 16px;
+    color: #a6a6a6;
+    text-decoration: none;
+}
+
+#team .social-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media(min-width: 1200px) {
+    #team .container {
+        max-width: 1280px;
+    }
+}
+
+@media(max-width: 960px) {
+    #team .team-card {
+        padding: 16px 0;
+    }
+
+    #team .img-div {
+        width: 136px;
+        height: 136px;
+        flex: 0 0 136px;
+    }
+
+    #team .p-name {
+        padding: 0px;
+        margin: 0px;
+    
+        font-size: 17px;
+        color: #ffffff;
+    }
+}
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+#testimonials .testimonials-swiper {
+    width: 100%;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: auto;
+    margin-left: auto;
+
+    overflow: hidden;
+}
+
+#testimonials .testimonials-swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+
+    width: 196px;
+    height: 196px;
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+#testimonials .testimonials-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+#testimonials .testimonials-swiper .testimonial-text {
+    margin: 24px 0 0 0;
+    padding: 0;
+
+    display: none;
+}
+
+#testimonials .testimonials-swiper-prev-btn,
+#testimonials .testimonials-swiper-next-btn {
+    width: fit-content;
+    height: fit-content;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 900;
+
+    font-weight: bold;
+    margin: auto 0;
+
+    cursor: pointer;
+}
+
+#testimonials .testimonials-swiper-prev-btn {
+    left: 12px;
+}
+
+#testimonials .testimonials-swiper-next-btn {
+    right: 12px;
+}
+
+#testimonials .test-text-swiper {
+    width: 100%;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: auto;
+    margin-left: auto;
+
+    overflow: hidden;
+}
+
+#testimonials .test-text-swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+#testimonials .test-text-swiper h4,
+#testimonials .test-text-swiper h6 {
+    text-align: center;
+    text-transform: uppercase;
+
+    margin: 2px 0;
+    padding: 0;
+}
+
+#testimonials .test-text-swiper h4 {
+    font-size: 24px;
+}
+
+#testimonials .test-text-swiper h6 {
+    color: #a6a6a6;
+    font-size: 17px;
+}
+
+#testimonials .test-text-swiper p {
+    text-align: center;
+    font-size: 16px;
+
+    margin: 8px 0;
+    padding: 0;
+}
+
+#testimonials .testimonials-swiper-prev-btn i,
+#testimonials .testimonials-swiper-next-btn i {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+#testimonials .testimonials-swiper-pagination {
+    text-align: center;
+}
+
+#testimonials .swiper-pagination-bullet {
+    background: #ffffff;
+}
+
+#testimonials .swiper-pagination-bullet-active {
+    background: #18d26e;
+}
+
+@media(max-width: 992px) {
+    #testimonials .testimonials-swiper .swiper-slide {
+        width: 168px;
+        height: 168px;
+    }
+
+    #testimonials .test-text-swiper h4 {
+        font-size: 20px;
+    }
+
+    #testimonials .test-text-swiper h6 {
+        font-size: 14px;
+    }
+
+    #testimonials .test-text-swiper p {
+        font-size: 14px;
+    }    
+}
+
+@media(max-width: 768px) {
+    #testimonials .container {
+        max-width: 100%;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media(min-width: 768px) {
+    #testimonials .container {
+        max-width: 768px;
+    }
+}
+
+@media(min-width: 992px) {
+    #testimonials .container {
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    #testimonials .container {
+        max-width: 1140px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Map
+--------------------------------------------------------------*/
+#map {
+    background-color: #202020;
+    margin: 0;
+}
+
+#map .map-div{
+    width: 100%;
+    height: 500px;
+    
+    margin: 0;
+    padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Announcement
+--------------------------------------------------------------*/
+#announcements {
+    margin: 0;
+
+    background-color: #000000;
+    text-align: right;
+}
+
+#announcements .announcement-swiper {
+    overflow: hidden;
+}
+
+#announcements .announcement-swiper-next-btn,
+#announcements .announcement-swiper-prev-btn {
+    width: fit-content;
+    height: fit-content;
+
+    position: absolute;
+    top: 30%;
+    z-index: 900;
+
+    font-weight: bold;
+    margin: auto 0;
+
+    cursor: pointer;
+}
+
+#announcements .announcement-swiper-prev-btn {
+    left: 24px;
+}
+
+#announcements .announcement-swiper-next-btn {
+    right: 24px;
+}
+
+#announcements .announcement-swiper-prev-btn i,
+#announcements .announcement-swiper-next-btn i {
+    font-size: 3em;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#announcements .announcement-swiper-pagination {
+    text-align: center;
+}
+
+#announcements .swiper-pagination-bullet {
+    background: #ffffff;
+}
+
+#announcements .swiper-pagination-bullet-active {
+    background: #18d26e;
+}
+
+#announcements h2 {
+    margin-bottom: 16px;
+}
+
+#announcements  .viewAll,
+#announcements  .viewAll:active {
+    color: #18d26e;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#announcements  .viewAll:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#announcements .row {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#announcements .announcement-col {
+    flex-basis: 31%;
+    border-radius: 15px;
+    margin: 0;
+    padding: 0 12px 20px 12px;
+    box-sizing: border-box;
+}
+
+#announcements .announcement-col img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* min-width: 100%;
+    min-height: 100%; */
+    /* width: auto;
+    height: auto; */
+    object-fit: cover;
+}
+
+#announcements .announcement-col .sep-line {
+    width: 100%;
+    height: 6px;
+
+    padding: 0;
+    margin: 16px 0;
+
+    background-color: #545454;
+}
+
+#announcements .announcement-heading h3,
+#announcements .announcement-heading:active h3{
+    /* font-size: 25px; */
+    text-align: center;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    color: #18d26e;
+}
+
+#announcements .announcement-heading ,
+#announcements .announcement-heading:active {
+    text-decoration: none;
+}
+
+#announcements .announcement-heading:hover h3{
+    color: white;
+    text-decoration: none;
+}
+
+#announcements .announcement-heading:hover {
+    text-decoration: none;
+}
+
+#announcements .announcement-col p {
+    color: #737373;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+
+    margin: 0;
+    position: relative;
+}
+
+#announcements .announcement-col .see-more,
+#announcements .announcement-col .see-more:active {
+    position: absolute;
+    z-index: 10;
+    color: #18d26e;
+    font-size: 16px;
+    background-color: #000000;
+    padding: 0 0 0 4px;
+
+    bottom: 0;
+    right: 0;
+}
+
+#announcements .announcement-col .see-more:hover{
+    color: white;
+    text-decoration: none;
+}
+
+@media(max-width: 768px) {
+    #announcements .row {
+        flex-direction: column;
+    }
+
+    #announcements .viewAll {
+        margin: 0 8%;
+    }
+
+    #announcements .announcement-col {
+        padding: 0 10% 32px 10%;
+    }
+}
+
+@media(max-width: 992px){
+    #announcements .announcement-col h3 {
+        font-size: 26px;
+    }
+
+    #announcements .announcement-col p {
+        font-size: 14px;
+    }
+
+    #announcements .announcement-col .see-more,
+    #announcements .announcement-col .see-more:active {
+        font-size: 14px;
+    }
+}
