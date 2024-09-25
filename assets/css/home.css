@@ -391,6 +391,41 @@
     padding: 16px 0 12px 0;
 }
 
+#executives .switch_bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 350px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#executives #cand-card a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 8px;
+}
+#executives #cand-card a.active{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+#executives #cand-card a:hover{
+    text-decoration: none;
+    background-color: grey;
+    color: black;
+    border: none;
+}
+
+#prev-candidate{
+    display: none;
+}
+
 @media(max-width: 576px) {
     #executives .candidate-col {
         width: 80%;

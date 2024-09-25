@@ -257,3 +257,43 @@ let preloader = document.querySelector('#preloader');
         preloader.remove()
     });
 }
+
+
+//Switching Candidate Tab
+const link1=document.getElementById("link1");
+const link2=document.getElementById("link2");
+function activateLink(clickedLink) {
+    const activeLink = document.querySelector('a.active');
+    if (activeLink) {
+        activeLink.classList.remove('active');
+    }
+    clickedLink.classList.add('active');
+}
+link1.addEventListener('click', function(event) {
+    event.preventDefault(); 
+    activateLink(link1);     
+});
+link2.addEventListener('click', function(event) {
+    event.preventDefault();
+    activateLink(link2);     
+});
+
+const currentDiv = document.getElementById('current-candidate');
+const prevDiv = document.getElementById('prev-candidate');
+
+function toggleDivs(clickedLink, showDiv, hideDiv) {
+    document.querySelectorAll('a').forEach(link => {
+        link.classList.remove('active');
+    });
+    clickedLink.classList.add('active');
+    showDiv.style.display = 'flex';
+    hideDiv.style.display = 'none';
+}
+link1.addEventListener('click', function(event) {
+    event.preventDefault();  
+    toggleDivs(link1, currentDiv, prevDiv);  
+});
+link2.addEventListener('click', function(event) {
+    event.preventDefault();  
+    toggleDivs(link2, prevDiv, currentDiv);  
+});
