@@ -1,0 +1,200 @@
+:root {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --bg--primary: #D9D4D2;
+    --bg--secondary: #0D0D0D;
+    --transition--speed: 600ms;
+}
+
+body {
+    color: rgb(219, 193, 193);
+    background-color: #202020;
+    margin: 0;
+    padding: 0;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #D9D9D9;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6f6666;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-logo {
+        display: flex;
+        top: 0;
+        position: sticky;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        background-color: #000;
+        z-index: 1;
+        opacity: 1;
+        height: 10vh;
+        padding-left: 1rem;
+}
+
+.logoDiv {
+    display: flex;
+    top: 0;
+    position: sticky;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #000;
+    margin-left: 1rem;
+    z-index: 1;
+    opacity: 1;
+    height: 10vh;
+}
+
+.logo {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 1.5rem;
+}
+
+.logoHref {
+    margin-right: 2.5%;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    text-decoration: none;
+}
+
+.bodyContent {
+    margin-top: 4rem;
+}
+
+#mainContent h1 {
+    font-size: 4rem;
+    opacity: 0.95;
+}
+
+#mainContent h2 {
+    font-size: 3rem;
+    opacity: 0.95;
+}
+
+#mainContent h3 {
+    font-size: 2rem;
+    opacity: 0.95;
+}
+
+#mainContent h5 {
+    font-size: 1.5rem;
+    opacity: 0.95;
+}
+
+#mainContent p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #404040;
+    opacity: 0.95;
+}
+
+#mainContent {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-width: 80%;
+    display: flex;
+    z-index: -1;
+    color: #D9D9D9;
+}
+
+#mainContent {
+    justify-content: center;
+}
+
+
+.marginal {
+    margin-left: 7rem;
+}
+
+.marginal ul li {
+    margin: 0.8rem;
+}
+
+.marginal ol li {
+    margin: 0.8rem;
+}
+
+.useful-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.indexTarget {
+    text-decoration: none;
+    color: #0D0D0D;
+    opacity: 0.6;
+    margin-left: 5%;
+}
+
+.indexTarget:hover {
+    opacity: 1;
+}
+
+
+
+
+@media (max-width: 800px) {
+    
+    main {
+        margin-left: 0;
+    }
+
+    #mainContent h1 {
+        font-size: 2.75rem;
+        margin-right: 5%;
+        opacity: 0.95;
+    }
+    
+    #mainContent h2 {
+        font-size: 2rem;
+        margin-right: 5%;
+        opacity: 0.95;
+    }
+    
+    #mainContent h3 {
+        font-size: 1.5rem;
+        margin-right: 5%;
+        opacity: 0.95;
+    }
+    
+    #mainContent h5 {
+        margin-right: 5%;
+        opacity: 0.95;
+    }
+    
+    #mainContent p {
+        font-size: 1rem;
+        margin-right: 5%;
+        color: #404040;
+        opacity: 0.95;
+    }
+
+    .marginal {
+        margin-left: 0;
+    }
+
+}
+
+
